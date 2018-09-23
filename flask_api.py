@@ -139,7 +139,7 @@ def update_task(movie_id):
     # otherwise, default to the value already stored.
     for key, value in movie[0].iteritems():
         if key is not 'id':
-            print "%s > JSON: %s || Object: %s" % (key, request.json.get(key, "Not here"), str(value))
+            print ("%s > JSON: %s || Object: %s") % (key, request.json.get(key, "Not here"), str(value))
             movie[0][key] = request.json.get(key, value)
 
     return jsonify({'movie': movie[0]})
