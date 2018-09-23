@@ -27,8 +27,8 @@ class FlaskMovieAPITests(unittest.TestCase):
         return self.app.open(url,
             method=method,
             headers={
-                'Authorization': 'Basic ' + base64.urlsafe_b64encode(username + \
-                ":" + password.encode('ascii')).decode('ascii')
+                'Authorization': 'Basic ' + base64.urlsafe_b64encode(bytes(username + \
+                ":" + password).encode('ascii')).decode('ascii')
             },
             *args, **kwargs
         )
