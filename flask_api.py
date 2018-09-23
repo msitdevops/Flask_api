@@ -237,5 +237,5 @@ def convert_id_to_uri(movie):
 if __name__ == "__main__":
     user = User("twaits", "Passphrase1")
     user.save()
-    print user.__dict__
+    print(user.__dict__)
     app.run(debug=True)
