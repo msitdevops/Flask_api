@@ -30,7 +30,7 @@ class FlaskMovieAPITests(unittest.TestCase):
                 'Authorization': 'Basic ' + base64.urlsafe_b64encode(bytes(username + \
                 ":" + password).encode('ascii')).decode('ascii')
             },
-            *args.decode("utf-8"), **kwargs.decode("utf-8")
+            *args, **kwargs
         )
 
     def test_user_status_code(self):
